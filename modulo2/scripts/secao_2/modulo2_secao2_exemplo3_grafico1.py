@@ -12,7 +12,7 @@ valores = [10, 12, 15, 14, 13, 16, 18, 17, 19, 20]
 df = pd.DataFrame({'Data': datas, 'Valor': valores})
 
 # Ajuste do modelo LOESS
-lowess = sm.nonparametric.lowess(df['Valor'], df['Data'], frac=0.3)
+lowess = sm.nonparametric.lowess(df['Valor'], df['Data'], frac=0.5)
 
 # Gráfico
 plt.plot(df['Data'], df['Valor'], marker='o', label='Original')
